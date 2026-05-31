@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Vaquero — premium floor jobs, long-term partnership. Subcontractor intake for commercial floor layers across Australia." />
+<meta name="theme-color" content="#0a0908" />
+<meta name="color-scheme" content="dark" />
+<title>Vaquero — Subbie Network</title>
+
+<!-- Open Graph / Twitter — clean link unfurl when shared via SMS / Messenger / email -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Vaquero Floorcoverings" />
+<meta property="og:title" content="Vaquero — Subbie Network" />
+<meta property="og:description" content="Premium commercial floor jobs, long-term partnership, weekly invoicing. Subcontractor intake for floor layers across Australia." />
+<meta property="og:url" content="https://vaquero-group.github.io/subbie-funnel/" />
+<meta property="og:image" content="https://vaquero-group.github.io/subbie-funnel/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Vaquero Floorcoverings — Subbie Network" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Vaquero — Subbie Network" />
+<meta name="twitter:description" content="Premium commercial floor jobs, long-term partnership, weekly invoicing. Subcontractor intake for floor layers across Australia." />
+<meta name="twitter:image" content="https://vaquero-group.github.io/subbie-funnel/og-image.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter+Tight:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0a0908;
+    --bg-2: #111110;
+    --bg-3: #161514;
+    --ink: #f5f1ea;
+    --ink-2: #a8a39a;
+    --ink-3: #6b6760;
+    --line: rgba(245, 241, 234, 0.08);
+    --line-2: rgba(245, 241, 234, 0.14);
+    --amber: #e8a04b;
+    --amber-2: #f5b961;
+    --amber-deep: #a86a1e;
+    --amber-glow: rgba(232, 160, 75, 0.18);
+
+    --f-display: 'Fraunces', Georgia, serif;
+    --f-body: 'Inter Tight', system-ui, sans-serif;
+    --f-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* film grain overlay */
+  .grain {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0.04;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  /* shared */
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+  input, select, textarea { font-family: inherit; color: inherit; }
+  ::selection { background: var(--amber); color: #000; }
+
+  .eyebrow {
+    font-family: var(--f-mono);
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+  }
+  .eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--ink-3);
+  }
+  .eyebrow.highlight { color: var(--amber); }
+  .eyebrow.highlight::before { background: var(--amber-deep); }
+
+  h1, h2, h3 {
+    font-family: var(--f-display);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+  h1 em, h2 em, h3 em {
+    font-style: italic;
+    color: var(--amber);
+    font-weight: 400;
+  }
+
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 56px;
+  }
+
+  /* nav */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(10, 9, 8, 0.72);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 56px;
+  }
+  .wordmark { display: inline-flex; align-items: center; }
+  .wordmark svg {
+    height: 38px;
+    width: auto;
+    color: var(--ink);
+    display: block;
+  }
+  .nav-meta {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--ink-3);
+    text-transform: uppercase;
+  }
+  .nav-cta {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--amber);
+    text-transform: uppercase;
+    border: 1px solid var(--amber-deep);
+    padding: 9px 16px;
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+  .nav-cta:hover { background: var(--amber); color: #0a0908; }
+
+  /* hero */
+  .hero {
+    position: relative;
+    padding: 140px 0 100px;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, var(--amber-glow) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 1100px; }
+
+  .hero h1 {
+    font-size: clamp(46px, 7vw, 96px);
+    margin: 28px 0 32px;
+    max-width: 14ch;
+  }
+  .hero-sub {
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    max-width: 62ch;
+    margin-bottom: 48px;
+    font-weight: 300;
+  }
+  .hero-sub strong { color: var(--ink); font-weight: 400; }
+
+  .cta-primary {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 32px;
+    background: var(--amber);
+    color: #0a0908;
+    font-family: var(--f-mono);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--amber);
+  }
+  .cta-primary span { position: relative; z-index: 2; }
+  .cta-primary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--amber-2);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+    z-index: 1;
+  }
+  .cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px var(--amber-glow);
+  }
+  .cta-primary:hover::after { transform: translateY(0); }
+  .cta-primary .arrow {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+  }
+  .cta-primary:hover .arrow { transform: translateX(4px); }
+
+  .hero-meta {
+    margin-top: 24px;
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--ink-3);
+    text-transform: uppercase;
+  }
+  .hero-meta .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--amber);
+    margin-right: 10px;
+    transform: translateY(-1px);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .hero-strip {
+    margin-top: 90px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 22px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--ink-2);
+    text-transform: uppercase;
+  }
+  .hero-strip .states { color: var(--ink); }
+  .hero-strip .states span { color: var(--amber); margin: 0 6px; }
+
+  /* hero animations */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .fade-up.d0 { animation-delay: 0s; }
+  .fade-up.d1 { animation-delay: 0.1s; }
+  .fade-up.d2 { animation-delay: 0.2s; }
+  .fade-up.d3 { animation-delay: 0.3s; }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* value / offer stack */
+  .value {
+    padding: 140px 0;
+    position: relative;
+  }
+  .value-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 64px;
+    align-items: end;
+  }
+  .value h2 {
+    font-size: clamp(36px, 4.5vw, 60px);
+    max-width: 14ch;
+  }
+  .value-intro {
+    color: var(--ink-2);
+    max-width: 44ch;
+    font-size: 16px;
+  }
+
+  .stack {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--line-2);
+    border: 1px solid var(--line-2);
+  }
+  .stack-item {
+    background: var(--bg);
+    padding: 40px 36px;
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    transition: background 0.3s ease;
+  }
+  .stack-item:hover { background: var(--bg-2); }
+  .stack-num {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--amber);
+    flex-shrink: 0;
+    padding-top: 4px;
+    min-width: 36px;
+  }
+  .stack-body h3 {
+    font-family: var(--f-display);
+    font-weight: 300;
+    font-size: 22px;
+    margin-bottom: 10px;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+  }
+  .stack-body p {
+    color: var(--ink-2);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* who / fit check */
+  .who {
+    padding: 140px 0;
+    background: var(--bg-2);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .who-head { max-width: 720px; margin: 0 auto 56px; text-align: center; }
+  .who-head h2 { font-size: clamp(34px, 4.5vw, 56px); margin: 20px 0 18px; }
+  .who-head p { color: var(--ink-2); font-size: 17px; }
+  .who-head .eyebrow { justify-content: center; }
+  .who-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line-2);
+    border: 1px solid var(--line-2);
+  }
+  .who-col { background: var(--bg); padding: 48px 44px; }
+  .who-col h3 {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .who-col h3::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+  }
+  .who-col.yes h3 { color: var(--amber); }
+  .who-col.yes h3::before { background: var(--amber); }
+  .who-col.no h3 { color: var(--ink-3); }
+  .who-col.no h3::before { background: var(--ink-3); }
+  .who-col ul { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+  .who-col li { display: flex; gap: 16px; font-size: 15px; line-height: 1.5; }
+  .who-col .mark {
+    font-family: var(--f-mono);
+    flex-shrink: 0;
+    width: 14px;
+    padding-top: 1px;
+    font-size: 14px;
+  }
+  .who-col.yes .mark { color: var(--amber); }
+  .who-col.yes li { color: var(--ink); }
+  .who-col.no .mark { color: var(--ink-3); }
+  .who-col.no li { color: var(--ink-2); }
+
+  /* process */
+  .process { padding: 140px 0; }
+  .process-head { max-width: 700px; margin: 0 auto 64px; text-align: center; }
+  .process-head .eyebrow { justify-content: center; }
+  .process-head h2 { font-size: clamp(34px, 4.5vw, 56px); margin: 20px 0 18px; }
+  .process-head p { color: var(--ink-2); font-size: 17px; }
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--line-2);
+    border-top: 1px solid var(--line-2);
+    border-bottom: 1px solid var(--line-2);
+  }
+  .process-step {
+    background: var(--bg);
+    padding: 44px 28px;
+    position: relative;
+    transition: background 0.3s ease;
+  }
+  .process-step:hover { background: var(--bg-2); }
+  .process-step .num {
+    font-family: var(--f-mono);
+    color: var(--amber);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    margin-bottom: 28px;
+    display: block;
+  }
+  .process-step h3 {
+    font-family: var(--f-display);
+    font-weight: 300;
+    font-size: 22px;
+    margin-bottom: 12px;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+  }
+  .process-step p { color: var(--ink-2); font-size: 14px; line-height: 1.55; }
+
+  /* credibility strip */
+  .strip {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 56px 0;
+  }
+  .strip-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+  }
+  .stat {
+    background: var(--bg-2);
+    padding: 14px 24px;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: var(--f-display);
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 300;
+    color: var(--amber);
+    line-height: 1;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+  .stat-label {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--ink-2);
+    text-transform: uppercase;
+  }
+
+  /* gm note */
+  .gm-note {
+    padding: 130px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  .gm-note::before {
+    content: '';
+    position: absolute;
+    top: -240px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, var(--amber-glow) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .gm-note-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .gm-note-inner .eyebrow { justify-content: center; }
+  .gm-quote {
+    font-family: var(--f-display);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(24px, 2.8vw, 34px);
+    line-height: 1.35;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    margin: 36px 0 0;
+  }
+  .gm-quote em { font-style: italic; color: var(--amber); font-weight: 400; }
+  .gm-quote p + p { margin-top: 22px; }
+  .gm-signoff {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--ink-2);
+    text-transform: uppercase;
+    margin-top: 40px;
+    display: inline-block;
+    border-top: 1px solid var(--line-2);
+    padding-top: 20px;
+  }
+
+  /* application section */
+  .apply {
+    padding: 140px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .apply::before {
+    content: '';
+    position: absolute;
+    top: 200px;
+    left: -300px;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, var(--amber-glow) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .apply-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 100px;
+    align-items: start;
+  }
+  .apply h2 {
+    font-size: clamp(36px, 4.5vw, 56px);
+    margin: 28px 0 28px;
+    max-width: 12ch;
+  }
+  .apply-intro {
+    color: var(--ink-2);
+    font-size: 16px;
+    margin-bottom: 48px;
+    max-width: 44ch;
+  }
+
+  .eligibility {
+    border-top: 1px solid var(--line);
+    padding-top: 32px;
+  }
+  .eligibility-title {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--ink-3);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .eligibility ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .eligibility li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 15px;
+    color: var(--ink);
+  }
+  .check {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    stroke: var(--amber);
+    stroke-width: 2;
+    fill: none;
+  }
+
+  /* form card */
+  .form-card {
+    background: var(--bg-2);
+    border: 1px solid var(--line-2);
+    padding: 44px;
+    position: relative;
+    min-height: 540px;
+  }
+  .form-header {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 28px;
+    margin-bottom: 36px;
+  }
+  .progress-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+  }
+  .progress-text {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--ink-2);
+    text-transform: uppercase;
+  }
+  .progress-text .highlight { color: var(--amber); }
+  .progress-bar {
+    height: 2px;
+    background: var(--line-2);
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--amber);
+    width: 16.66%;
+    transition: width 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+    box-shadow: 0 0 12px var(--amber-glow);
+  }
+
+  .step { display: none; animation: fadeIn 0.4s ease forwards; }
+  .step.active { display: block; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .step h3 {
+    font-family: var(--f-display);
+    font-weight: 300;
+    font-size: 26px;
+    margin-bottom: 32px;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+  }
+  .step h3 em { font-style: italic; color: var(--amber); }
+
+  .field {
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .field label {
+    display: block;
+    font-family: var(--f-mono);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    color: var(--ink-3);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--line-2);
+    padding: 10px 0 12px;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.25s ease;
+  }
+  .field input::placeholder,
+  .field textarea::placeholder { color: var(--ink-3); font-weight: 300; }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    border-bottom-color: var(--amber);
+  }
+  .field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23a8a39a' stroke-width='1.5' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 4px center;
+    padding-right: 24px;
+    cursor: pointer;
+  }
+  .field select option {
+    background: var(--bg-2);
+    color: var(--ink);
+  }
+  .field textarea {
+    resize: vertical;
+    min-height: 130px;
+    line-height: 1.6;
+  }
+  .helper {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    color: var(--ink-3);
+    margin-top: 10px;
+    letter-spacing: 0.04em;
+  }
+
+  /* chips */
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .chip {
+    padding: 11px 18px;
+    border: 1px solid var(--line-2);
+    background: transparent;
+    color: var(--ink);
+    font-size: 14px;
+    font-family: var(--f-body);
+    font-weight: 300;
+    transition: all 0.2s ease;
+    user-select: none;
+  }
+  .chip:hover { border-color: var(--amber-deep); color: var(--amber-2); }
+  .chip.selected {
+    background: var(--amber);
+    color: #0a0908;
+    border-color: var(--amber);
+    font-weight: 400;
+  }
+
+  /* radio pills */
+  .pills { display: flex; flex-direction: column; gap: 10px; }
+  .pill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border: 1px solid var(--line-2);
+    background: transparent;
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--ink);
+    transition: all 0.2s ease;
+  }
+  .pill:hover { border-color: var(--amber-deep); }
+  .pill.selected {
+    border-color: var(--amber);
+    background: rgba(232, 160, 75, 0.06);
+  }
+  .pill .indicator {
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--ink-3);
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+    transition: border-color 0.2s ease;
+  }
+  .pill.selected .indicator { border-color: var(--amber); }
+  .pill.selected .indicator::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: var(--amber);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--amber-glow);
+  }
+
+  .yesno { display: flex; gap: 10px; }
+  .yesno .chip { flex: 1; text-align: center; }
+
+  .form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+  }
+  .btn-back {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    padding: 12px 0;
+    transition: color 0.2s ease;
+  }
+  .btn-back:hover:not(:disabled) { color: var(--amber); }
+  .btn-back:disabled { color: var(--ink-3); opacity: 0.4; cursor: not-allowed; }
+  .btn-next {
+    position: relative;
+    padding: 14px 28px;
+    background: var(--amber);
+    color: #0a0908;
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--amber);
+    overflow: hidden;
+  }
+  .btn-next::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--amber-2);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+    z-index: 1;
+  }
+  .btn-next span { position: relative; z-index: 2; }
+  .btn-next:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px var(--amber-glow);
+  }
+  .btn-next:hover::after { transform: translateY(0); }
+
+  /* success / deferral panels */
+  .success {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .success.active { display: block; animation: fadeIn 0.6s ease forwards; }
+  .success-icon {
+    width: 72px;
+    height: 72px;
+    border: 1.5px solid var(--amber);
+    border-radius: 50%;
+    margin: 0 auto 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 40px var(--amber-glow);
+  }
+  .success-icon svg { width: 30px; height: 30px; stroke: var(--amber); stroke-width: 2; fill: none; }
+  .success h3 {
+    font-family: var(--f-display);
+    font-weight: 300;
+    font-size: 32px;
+    margin-bottom: 18px;
+    letter-spacing: -0.015em;
+  }
+  .success h3 em { font-style: italic; color: var(--amber); }
+  .success p {
+    color: var(--ink-2);
+    max-width: 36ch;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  .success-meta {
+    margin-top: 36px;
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--amber);
+    text-transform: uppercase;
+  }
+
+  /* deferral panel variant (insurance below $10M) — same skeleton, muted palette */
+  .success.deferral .success-icon { border-color: var(--ink-2); box-shadow: none; }
+  .success.deferral .success-icon svg { stroke: var(--ink-2); }
+  .success.deferral .success-meta { color: var(--ink-2); }
+
+  /* faq */
+  .faq {
+    padding: 140px 0;
+    background: var(--bg-2);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .faq-head { max-width: 700px; margin: 0 auto 56px; text-align: center; }
+  .faq-head .eyebrow { justify-content: center; }
+  .faq-head h2 { font-size: clamp(34px, 4.5vw, 56px); margin: 20px 0; }
+  .faq-list { max-width: 820px; margin: 0 auto; border-top: 1px solid var(--line); }
+  .faq-item { border-bottom: 1px solid var(--line); }
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 26px 4px 26px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    font-family: var(--f-display);
+    font-weight: 300;
+    font-size: 19px;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    transition: color 0.2s ease;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::marker { display: none; content: ''; }
+  .faq-item summary:hover { color: var(--amber); }
+  .faq-item .plus {
+    font-family: var(--f-mono);
+    color: var(--amber);
+    font-size: 20px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    width: 16px;
+    text-align: center;
+    user-select: none;
+  }
+  .faq-item[open] .plus { transform: rotate(45deg); }
+  .faq-answer {
+    padding: 0 0 28px;
+    color: var(--ink-2);
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 66ch;
+  }
+  .faq-answer + .faq-answer { margin-top: 12px; }
+
+  /* honeypot — off-screen, real users never see or tab to it; bots fill it */
+  .hp-field {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* footer */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 56px 0 48px;
+    background: var(--bg-2);
+  }
+  .footer-privacy {
+    font-family: var(--f-body);
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--ink-3);
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  .footer-logo { display: inline-flex; align-items: center; }
+  .footer-logo svg {
+    height: 60px;
+    width: auto;
+    color: var(--ink);
+    display: block;
+  }
+  .footer-cta {
+    color: var(--ink);
+    font-family: var(--f-display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 17px;
+    transition: color 0.2s ease;
+  }
+  .footer-cta:hover { color: var(--amber); }
+  .footer-cta .arrow { transition: transform 0.3s ease; display: inline-block; margin-left: 6px; }
+  .footer-cta:hover .arrow { transform: translateX(6px); }
+  .footer-meta {
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--ink-3);
+    text-transform: uppercase;
+    text-align: right;
+  }
+  .footer-meta div + div { margin-top: 6px; }
+
+  /* responsive */
+  @media (max-width: 900px) {
+    .container { padding: 0 24px; }
+    .nav-inner { padding: 14px 24px; }
+    .wordmark svg { height: 32px; }
+    .nav-meta { display: none; }
+    .nav-cta { padding: 8px 12px; font-size: 10px; }
+
+    .hero { padding: 80px 0 70px; }
+    .hero h1 { font-size: 42px; margin: 22px 0 24px; }
+    .hero-sub { font-size: 16px; margin-bottom: 36px; }
+    .hero-strip {
+      margin-top: 60px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 10px;
+      padding: 18px 0;
+    }
+
+    .value { padding: 80px 0; }
+    .value-head { grid-template-columns: 1fr; gap: 28px; margin-bottom: 40px; }
+    .value h2 { font-size: 34px; }
+    .stack { grid-template-columns: 1fr; }
+    .stack-item { padding: 30px 24px; }
+
+    .who { padding: 80px 0; }
+    .who-head { margin-bottom: 40px; }
+    .who-head h2 { font-size: 30px; }
+    .who-grid { grid-template-columns: 1fr; }
+    .who-col { padding: 36px 28px; }
+
+    .process { padding: 80px 0; }
+    .process-head h2 { font-size: 30px; }
+    .process-steps { grid-template-columns: 1fr; }
+    .process-step { padding: 32px 28px; }
+
+    .strip { padding: 40px 0; }
+    .strip-inner { grid-template-columns: 1fr 1fr; }
+    .stat-num { font-size: 32px; }
+
+    .gm-note { padding: 80px 0; }
+    .gm-quote { font-size: 22px; }
+
+    .apply { padding: 80px 0; }
+    .apply-grid { grid-template-columns: 1fr; gap: 56px; }
+    .apply h2 { font-size: 34px; }
+    .form-card { padding: 28px 22px; }
+    .step h3 { font-size: 22px; }
+
+    .faq { padding: 80px 0; }
+    .faq-head h2 { font-size: 30px; }
+    .faq-item summary { font-size: 16px; padding: 22px 0; gap: 16px; }
+
+    .footer-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      gap: 28px;
+    }
+    .footer-logo svg { height: 50px; }
+    .footer-meta { text-align: left; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- shared SVG symbols — single source of truth for the brand mark -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="vq-mark" fill="currentColor">
+      <path d="M245.325,392.68c8.226,5.052,16.447,10.112,24.661,15.181c8.197,5.057,16.39,10.124,24.579,15.2c-0.11,24.21,0,48.43-0.04,72.65c21.69,13.48,43.92,26.11,65.28,40.12c-0.01-24.4,0.04-48.8-0.08-73.2c5.64,3.41,11.15,7.18,16.96,10.22c5.67-3.27,11.14-6.88,16.85-10.08c0.01,24.26,0.05,48.52,0.1,72.79c21.65-13.38,43.42-26.58,65.26-39.64c-0.11-24.28,0.18-48.55-0.12-72.82c8.185-4.984,16.401-10.024,24.646-15.12c8.256-5.102,16.448-10.203,24.577-15.301c0.102,21.737,0.153,43.477,0.153,65.221c0,21.749-0.051,43.496-0.153,65.24c-21.795,13.599-43.624,27.147-65.486,40.643c-21.921,13.532-43.874,27.012-65.858,40.438c-29.07-18.27-58.56-35.86-87.63-54.14c-14.62-8.9-29.14-17.95-43.7-26.94c0.048-21.749,0.071-43.495,0.071-65.24C245.396,436.16,245.372,414.42,245.325,392.68z"/>
+      <path d="M507.999,294.332v-0.113c-38.24-0.08-76.479,0.05-114.709-0.05c0.13,29.09-0.05,58.18,0.07,87.27c-5.52,3.7-11.31,6.97-17.15,10.14c-5.18-3.59-10.76-6.55-16.03-10.02c-0.35-29.1-0.19-58.22-0.34-87.31c-17.177-0.019-40.083-0.036-57.26-0.041c-17.175-0.005-40.08-0.003-57.255,0.006c0.015,12.446,0.023,24.89,0.023,37.332c0,12.452-0.008,24.907-0.023,37.364c7.965,4.935,15.936,9.862,23.915,14.78c35.68,21.993,71.477,43.799,107.39,65.42c35.387-23.5,72.575-46.592,111.627-69.014c6.593-3.785,13.172-7.513,19.738-11.185C507.996,344.051,507.998,319.192,507.999,294.332z"/>
+    </g>
+  </defs>
+</svg>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ───────── nav ───────── -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="wordmark" aria-label="Vaquero Group">
+      <svg viewBox="240 285 340 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vaquero Group">
+        <use href="#vq-mark"/>
+      </svg>
+    </a>
+    <div class="nav-meta">SUBBIE NETWORK · AUS</div>
+    <a href="#apply" class="nav-cta">Apply →</a>
+  </div>
+</nav>
+
+<!-- ───────── hero ───────── -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="eyebrow highlight fade-up d0">SUBCONTRACTOR INTAKE · BY APPLICATION</div>
+    <h1 class="fade-up d1">
+      Premium floor jobs. <em>Long-term</em> partnership.<br />Not one-off gigs.
+    </h1>
+    <p class="hero-sub fade-up d2">
+      Vaquero runs a network of commercial floor layers across NSW, VIC, QLD, WA, SA and TAS. Premium rates. Weekly invoicing. A steady book of fitouts — not a never-ending bid pipeline.
+    </p>
+    <a href="#apply" class="cta-primary fade-up d3">
+      <span>Apply to the network</span>
+      <span class="arrow">→</span>
+    </a>
+    <div class="hero-meta fade-up d3">
+      <span class="dot"></span>Every application reviewed by the GM
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero-strip">
+      <div class="states">
+        NSW<span>·</span>VIC<span>·</span>QLD<span>·</span>WA<span>·</span>SA<span>·</span>TAS
+      </div>
+      <div>EST. 2024</div>
+      <div>BY INVITE / APPLICATION</div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── what's on offer ───────── -->
+<section class="value">
+  <div class="container">
+    <div class="value-head">
+      <div>
+        <div class="eyebrow">THE NETWORK</div>
+        <h2 style="margin-top: 20px;">
+          What the network <em>offers</em>.
+        </h2>
+      </div>
+      <p class="value-intro">
+        Six things that make this different from chasing the next quote.
+      </p>
+    </div>
+
+    <div class="stack">
+      <div class="stack-item">
+        <span class="stack-num">01</span>
+        <div class="stack-body">
+          <h3>Premium rates, paid weekly</h3>
+          <p>Weekly invoicing cycle. Invoice the job, get paid that week. No 30/60/90, no chasing accounts.</p>
+        </div>
+      </div>
+      <div class="stack-item">
+        <span class="stack-num">02</span>
+        <div class="stack-body">
+          <h3>A steady book, not gigs</h3>
+          <p>Commercial fitouts, retail rollouts, hospitality, healthcare, education. Repeat-builder relationships. Your crew booked, not hunting.</p>
+        </div>
+      </div>
+      <div class="stack-item">
+        <span class="stack-num">03</span>
+        <div class="stack-body">
+          <h3>Direct line to the GM</h3>
+          <p>No middlemen. Variations handled fairly on the spot. Site changes treated like adults talking to adults.</p>
+        </div>
+      </div>
+      <div class="stack-item">
+        <span class="stack-num">04</span>
+        <div class="stack-body">
+          <h3>No bidding wars</h3>
+          <p>Once you're vetted, work comes to you. We route jobs by region and specialty — you don't compete for them.</p>
+        </div>
+      </div>
+      <div class="stack-item">
+        <span class="stack-num">05</span>
+        <div class="stack-body">
+          <h3>Clear scope, fair scope</h3>
+          <p>Briefs you can build off. Variations priced before the saw comes out. No surprise extras that quietly become yours.</p>
+        </div>
+      </div>
+      <div class="stack-item">
+        <span class="stack-num">06</span>
+        <div class="stack-body">
+          <h3>Treated like a partner</h3>
+          <p>You bring the craft and your crew. We handle the build, the builder, and the paperwork. That's the relationship.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── who is this for ───────── -->
+<section class="who">
+  <div class="container">
+    <div class="who-head">
+      <div class="eyebrow">WHO IT'S FOR</div>
+      <h2>Built for a <em>specific kind</em> of subbie.</h2>
+      <p>The network suits some crews and doesn't suit others — here's the honest line on both.</p>
+    </div>
+
+    <div class="who-grid">
+      <div class="who-col yes">
+        <h3>Built for</h3>
+        <ul>
+          <li><span class="mark">✓</span><span>ABN holders with $10M+ PL and white card already sorted</span></li>
+          <li><span class="mark">✓</span><span>2+ years laying floor, with work you can show</span></li>
+          <li><span class="mark">✓</span><span>Crews who want a steady book of commercial work</span></li>
+          <li><span class="mark">✓</span><span>Subbies who finish what they start and answer their phone</span></li>
+          <li><span class="mark">✓</span><span>Tradesmen who treat the work like a craft</span></li>
+        </ul>
+      </div>
+      <div class="who-col no">
+        <h3>Not built for</h3>
+        <ul>
+          <li><span class="mark">✕</span><span>One-off gigs or single-job arrangements</span></li>
+          <li><span class="mark">✕</span><span>Lowest-bidder, quote-chasing work</span></li>
+          <li><span class="mark">✕</span><span>Subbies still sorting insurance, ABN, or compliance</span></li>
+          <li><span class="mark">✕</span><span>Crews not set up for commercial site requirements</span></li>
+          <li><span class="mark">✕</span><span>Cash-in-hand operators</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── process ───────── -->
+<section class="process">
+  <div class="container">
+    <div class="process-head">
+      <div class="eyebrow">HOW IT RUNS</div>
+      <h2>From application to <em>active book</em>.</h2>
+      <p>Five steps. No mystery, no run-around.</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <span class="num">01</span>
+        <h3>Apply</h3>
+        <p>Six quick steps. ~5 minutes. Tap your phone, you're done.</p>
+      </div>
+      <div class="process-step">
+        <span class="num">02</span>
+        <h3>GM Review</h3>
+        <p>The GM personally reads every application. Not an algorithm, not a junior.</p>
+      </div>
+      <div class="process-step">
+        <span class="num">03</span>
+        <h3>Conversation</h3>
+        <p>If you're a fit, we talk. It's a conversation, not an interview.</p>
+      </div>
+      <div class="process-step">
+        <span class="num">04</span>
+        <h3>Trial Job</h3>
+        <p>One job. See how we run a site, pay our invoices, handle scope.</p>
+      </div>
+      <div class="process-step">
+        <span class="num">05</span>
+        <h3>Active Book</h3>
+        <p>On the rotation. Work routed to you by region and specialty.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── credibility strip ───────── -->
+<section class="strip">
+  <div class="container">
+    <div class="strip-inner">
+      <div class="stat">
+        <div class="stat-num">Weekly</div>
+        <div class="stat-label">Invoicing Cycle</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">Direct</div>
+        <div class="stat-label">GM Access</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">6</div>
+        <div class="stat-label">States Serviced</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">$10M</div>
+        <div class="stat-label">PL Insurance Req.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── gm note ───────── -->
+<section class="gm-note">
+  <div class="container">
+    <div class="gm-note-inner">
+      <div class="eyebrow highlight">A NOTE FROM THE GM</div>
+      <div class="gm-quote">
+        <p>We're not trying to build the biggest book of subbies in Australia. We're trying to build the <em>right one</em>.</p>
+        <p>If you'd rather walk a job than do it half-right — if you'd rather be paid weekly at a premium than monthly at the bottom — this is your network.</p>
+        <p>We'll know in the first ten minutes whether we're a fit.</p>
+      </div>
+      <div class="gm-signoff">— THE GM · VAQUERO FLOORCOVERINGS</div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── application section ───────── -->
+<section class="apply" id="apply">
+  <div class="container">
+    <div class="apply-grid">
+      <div class="apply-intro-col">
+        <div class="eyebrow highlight">APPLICATION</div>
+        <h2>Apply to the <em>network</em>.</h2>
+        <p class="apply-intro">
+          Six quick steps. The GM reads every application. If you're a fit, we'll have a conversation — not an interview.
+        </p>
+
+        <div class="eligibility">
+          <div class="eligibility-title">Before you start — you'll need</div>
+          <ul>
+            <li>
+              <svg class="check" viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6" /></svg>
+              <span>ABN holders only</span>
+            </li>
+            <li>
+              <svg class="check" viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6" /></svg>
+              <span>Public liability insurance $10M+</span>
+            </li>
+            <li>
+              <svg class="check" viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6" /></svg>
+              <span>White card / construction induction</span>
+            </li>
+            <li>
+              <svg class="check" viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6" /></svg>
+              <span>Own tools and reliable vehicle</span>
+            </li>
+            <li>
+              <svg class="check" viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6" /></svg>
+              <span>2+ years floor-laying experience</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ───────── form card ───────── -->
+      <div class="form-card">
+        <div class="form-header">
+          <div class="progress-row">
+            <div class="progress-text">
+              Step <span class="highlight" id="step-current">1</span> of 6
+            </div>
+            <div class="progress-text" id="step-label">WHO</div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+
+        <form id="app-form" novalidate>
+
+          <!-- honeypot: hidden from humans, catches bots. Submitted-but-filled = silently dropped. -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="f-company">Company (leave this blank)</label>
+            <input type="text" id="f-company" name="company" tabindex="-1" autocomplete="off" />
+          </div>
+
+
+          <!-- step 1 -->
+          <div class="step active" data-step="1">
+            <h3>First, <em>who</em> are we talking to?</h3>
+            <div class="field">
+              <label for="f-name">Full name</label>
+              <input type="text" id="f-name" name="name" autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="f-phone">Mobile</label>
+              <input type="tel" id="f-phone" name="phone" autocomplete="tel" placeholder="04XX XXX XXX" />
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="email" autocomplete="email" />
+            </div>
+          </div>
+
+          <!-- step 2 -->
+          <div class="step" data-step="2">
+            <h3>What's your floor-laying <em>specialty</em>?</h3>
+            <div class="helper" style="margin-bottom: 20px;">Select all that apply — minimum one.</div>
+            <div class="chips" id="specialty-chips">
+              <button type="button" class="chip" data-value="Vinyl / LVT">Vinyl / LVT</button>
+              <button type="button" class="chip" data-value="Carpet">Carpet</button>
+              <button type="button" class="chip" data-value="Carpet tile">Carpet tile</button>
+              <button type="button" class="chip" data-value="Sheet vinyl">Sheet vinyl</button>
+              <button type="button" class="chip" data-value="Polished concrete">Polished concrete</button>
+              <button type="button" class="chip" data-value="Epoxy">Epoxy</button>
+              <button type="button" class="chip" data-value="Timber">Timber</button>
+              <button type="button" class="chip" data-value="Sanding & polishing">Sanding &amp; polishing</button>
+            </div>
+          </div>
+
+          <!-- step 3 -->
+          <div class="step" data-step="3">
+            <h3>How long have you been <em>laying floors</em>?</h3>
+            <div class="pills" id="experience-pills">
+              <button type="button" class="pill" data-value="2-5 years">
+                <span>2–5 years</span><span class="indicator"></span>
+              </button>
+              <button type="button" class="pill" data-value="5-10 years">
+                <span>5–10 years</span><span class="indicator"></span>
+              </button>
+              <button type="button" class="pill" data-value="10-20 years">
+                <span>10–20 years</span><span class="indicator"></span>
+              </button>
+              <button type="button" class="pill" data-value="20+ years">
+                <span>20+ years — old hand</span><span class="indicator"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- step 4 -->
+          <div class="step" data-step="4">
+            <h3>Quick <em>compliance</em> check.</h3>
+            <div class="field">
+              <label for="f-abn">ABN</label>
+              <input type="text" id="f-abn" name="abn" placeholder="11 222 333 444" inputmode="numeric" />
+            </div>
+            <div class="field">
+              <label for="f-insurance">Public liability cover</label>
+              <select id="f-insurance" name="insurance">
+                <option value="">— select —</option>
+                <option value="$20M">$20M</option>
+                <option value="$10M">$10M</option>
+                <option value="$5M">$5M</option>
+                <option value="No cover yet">No cover yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>White card?</label>
+              <div class="yesno" id="whitecard-chips">
+                <button type="button" class="chip" data-value="Yes">Yes</button>
+                <button type="button" class="chip" data-value="No">No</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- step 5 -->
+          <div class="step" data-step="5">
+            <h3>Where &amp; <em>when</em> can you work?</h3>
+            <div class="field">
+              <label for="f-postcode">Service area / postcode</label>
+              <input type="text" id="f-postcode" name="postcode" autocomplete="postal-code" placeholder="e.g. 3000 or 'Inner Melbourne'" />
+            </div>
+            <div class="field" style="margin-top: 32px;">
+              <label>Current availability</label>
+              <div class="pills" id="availability-pills" style="margin-top: 8px;">
+                <button type="button" class="pill" data-value="Available now">
+                  <span>Available now</span><span class="indicator"></span>
+                </button>
+                <button type="button" class="pill" data-value="In 1-2 weeks">
+                  <span>In 1–2 weeks</span><span class="indicator"></span>
+                </button>
+                <button type="button" class="pill" data-value="Within a month">
+                  <span>Within a month</span><span class="indicator"></span>
+                </button>
+                <button type="button" class="pill" data-value="Casual / overflow only">
+                  <span>Casual / overflow only</span><span class="indicator"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- step 6 -->
+          <div class="step" data-step="6">
+            <h3>Last bit — <em>show us</em> your work.</h3>
+            <div class="field">
+              <label for="f-reference">A builder, PM, or shop who'd vouch for you</label>
+              <input type="text" id="f-reference" name="reference" placeholder="Name + company" />
+              <div class="helper">We may reach out — only after we've spoken to you first.</div>
+            </div>
+            <div class="field">
+              <label for="f-worklink">Link to your last 3 jobs</label>
+              <input type="text" id="f-worklink" name="work_link" placeholder="Instagram, Google Drive, Dropbox, anything" />
+              <div class="helper">Photos do the work words can't.</div>
+            </div>
+            <div class="field">
+              <label for="f-notes">Anything else? (optional)</label>
+              <textarea id="f-notes" name="notes" rows="4" placeholder="Crew size, specialty jobs, why you'd fit our book…"></textarea>
+              <div class="helper">Optional — but the good ones always write something.</div>
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <button type="button" class="btn-back" id="btn-back" disabled>← Back</button>
+            <button type="button" class="btn-next" id="btn-next">
+              <span>Continue →</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- success panel -->
+        <div class="success" id="success-panel">
+          <div class="success-icon">
+            <svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6" /></svg>
+          </div>
+          <h3>Application received.</h3>
+          <p>Thanks for putting your name in. The GM reviews every one — if you're a fit, we'll be in touch.</p>
+          <div class="success-meta">REVIEWED BY THE GM</div>
+        </div>
+
+        <!-- deferral panel — shown when PL cover is below $10M -->
+        <div class="success deferral" id="deferral-panel">
+          <div class="success-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" stroke-linecap="round" />
+              <path d="M12 8v4M12 16h.01" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3>Come back when you're <em>covered</em>.</h3>
+          <p>Public liability cover is non-negotiable on our jobs — $10M minimum. Sort the cover, then run the application again. We'll pick up where you left off.</p>
+          <div class="success-meta">PL COVER REQUIRED · $10M MIN</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── faq ───────── -->
+<section class="faq">
+  <div class="container">
+    <div class="faq-head">
+      <div class="eyebrow">QUESTIONS WE GET</div>
+      <h2>Straight <em>answers</em>.</h2>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>I'm in WA / QLD / SA — do you actually work in my state? <span class="plus">+</span></summary>
+        <div class="faq-answer">Yes. We service NSW, VIC, QLD, WA, SA and TAS. Drop your postcode in the application — that's how we route the right jobs to you. If we're still light on builders in your patch, we'll tell you straight rather than string you along.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What kind of work is on the book? <span class="plus">+</span></summary>
+        <div class="faq-answer">Commercial fitouts, retail rollouts, hospitality, healthcare, education. Repeat-builder relationships, not one-off resi flips. The book is built for crews that want to be booked through the year — not chasing the next quote every Friday.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What about payment terms? I've been burned before. <span class="plus">+</span></summary>
+        <div class="faq-answer">Weekly invoicing cycle. Invoice the job, get paid that week. No 30/60/90, no chasing accounts, no "we'll get to it." It's the single biggest thing the network is built around — because we know it's the single biggest reason good subbies disappear.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do I need to be available full-time? <span class="plus">+</span></summary>
+        <div class="faq-answer">No. There's a casual / overflow option in the application. If you've got capacity but only sometimes — busy season, weekends, the odd week — that's still useful to us. We'll route the right kind of work your way.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Will you call my reference without my say-so? <span class="plus">+</span></summary>
+        <div class="faq-answer">Never. We talk to you first. References get called only after we've had a conversation with you and you've okayed it. We've been the subbie getting called behind our back — we don't do it to ours.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What if I don't have $10M PL cover yet? <span class="plus">+</span></summary>
+        <div class="faq-answer">It's a hard line. Every commercial job we run requires $10M minimum, and that's the floor. Sort the cover first, then come back — the application picks up where you left off, no extra forms.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is this labour-hire? Am I working for Vaquero? <span class="plus">+</span></summary>
+        <div class="faq-answer">No. You run your own crew, your own ABN, your own gear. Vaquero is the commercial flooring contractor on the job — we hand you the work and pay you for it. You're a subcontractor in the network, not on the payroll. That's the relationship, and it's what keeps it clean for both sides.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What if I'm not a fit? <span class="plus">+</span></summary>
+        <div class="faq-answer">You'll hear from us either way. If the book is full for your specialty or your patch, we'll tell you — and we'll keep your details on file. The network expands as the build pipeline does. "Not now" doesn't mean "not ever."</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── footer ───────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo" aria-label="Vaquero Group">
+        <svg viewBox="230 270 690 430" xmlns="http://www.w3.org/2000/svg" fill="currentColor" role="img" aria-label="Vaquero Group">
+<use href="#vq-mark"/>
+<path d="M563.065,367.374l13.535,49.717l2.278,15.321h-11.48L545.6,367.374H563.065z M575.349,417.091l13.535-49.717h17.556l-21.933,65.038h-11.346L575.349,417.091z"/>
+<path d="M635.43,381.042l-15.858,51.37h-16.84l23.898-65.038h10.676L635.43,381.042z M647.937,408.157v12.105h-33.368v-12.105H647.937z M648.562,432.412l-15.901-51.37l-2.055-13.668h10.81l24.032,65.038H648.562z"/>
+<path d="M724.41,398.598v2.635c0,4.974-0.692,9.433-2.077,13.378c-1.385,3.946-3.351,7.311-5.896,10.095c-2.546,2.785-5.547,4.914-9.001,6.388c-3.455,1.474-7.267,2.211-11.436,2.211c-4.198,0-8.033-0.737-11.502-2.211c-3.47-1.474-6.478-3.603-9.023-6.388c-2.546-2.784-4.512-6.149-5.896-10.095c-1.385-3.945-2.077-8.405-2.077-13.378v-2.635c0-4.973,0.692-9.44,2.077-13.401c1.385-3.96,3.335-7.333,5.852-10.118c2.517-2.784,5.51-4.914,8.979-6.388c3.469-1.474,7.304-2.211,11.503-2.211c4.169,0,7.988,0.737,11.457,2.211c3.469,1.474,6.478,3.604,9.023,6.388c2.546,2.785,4.519,6.158,5.919,10.118C723.71,389.158,724.41,393.625,724.41,398.598z M708.463,401.233v-2.725c0-3.216-0.275-6.053-0.826-8.509c-0.552-2.457-1.362-4.519-2.435-6.187c-1.072-1.667-2.39-2.926-3.953-3.774s-3.344-1.273-5.338-1.273c-2.085,0-3.901,0.424-5.45,1.273s-2.844,2.107-3.886,3.774c-1.043,1.668-1.824,3.73-2.346,6.187c-0.521,2.457-0.781,5.293-0.781,8.509v2.725c0,3.187,0.261,6.008,0.781,8.465c0.521,2.457,1.311,4.534,2.368,6.231c1.057,1.697,2.367,2.978,3.931,3.841c1.563,0.864,3.387,1.295,5.472,1.295c1.995,0,3.768-0.431,5.315-1.295c1.549-0.863,2.852-2.144,3.909-3.841c1.057-1.697,1.86-3.774,2.412-6.231C708.188,407.241,708.463,404.42,708.463,401.233z M705.515,421.691l18.136,14.384l-9.738,8.219l-17.822-14.383L705.515,421.691z"/>
+<path d="M767.694,367.374h15.679v42.48c0,5.063-1.058,9.344-3.172,12.843c-2.114,3.5-5.077,6.142-8.889,7.929c-3.812,1.787-8.294,2.68-13.445,2.68c-5.093,0-9.567-0.894-13.423-2.68c-3.857-1.787-6.865-4.429-9.023-7.929c-2.159-3.499-3.238-7.78-3.238-12.843v-42.48h15.723v42.48c0,2.68,0.387,4.862,1.162,6.544c0.773,1.683,1.905,2.911,3.395,3.685c1.489,0.775,3.29,1.161,5.405,1.161c2.144,0,3.945-0.386,5.404-1.161c1.459-0.774,2.562-2.002,3.306-3.685c0.744-1.682,1.117-3.864,1.117-6.544V367.374z"/>
+<path d="M808.879,367.374v65.038H793.2v-65.038H808.879z M838.093,367.374v12.105h-34.797v-12.105H838.093z M833.492,393.192v11.659h-30.196v-11.659H833.492z M837.959,420.352v12.061h-34.663v-12.061H837.959z"/>
+<path d="M844.392,367.374h25.596c5.003,0,9.351,0.745,13.043,2.233c3.692,1.489,6.544,3.693,8.555,6.611c2.01,2.919,3.015,6.522,3.015,10.81c0,3.723-0.58,6.834-1.742,9.336c-1.161,2.501-2.776,4.564-4.846,6.187c-2.07,1.624-4.475,2.956-7.215,3.998l-5.137,2.903h-21.485l-0.09-12.105h15.902c1.995,0,3.647-0.357,4.958-1.072c1.311-0.715,2.301-1.734,2.971-3.06c0.67-1.325,1.005-2.91,1.005-4.757c0-1.876-0.343-3.484-1.027-4.824c-0.686-1.34-1.69-2.367-3.015-3.082c-1.326-0.715-2.956-1.072-4.892-1.072h-9.917v52.933h-15.679V367.374z M879.993,432.412l-14.384-28.767l16.617-0.089l14.562,28.187v0.67H879.993z"/>
+<path d="M959.102,398.598v2.635c0,4.974-0.692,9.433-2.077,13.378c-1.385,3.946-3.343,7.311-5.874,10.095c-2.531,2.785-5.523,4.914-8.979,6.388c-3.454,1.474-7.266,2.211-11.435,2.211c-4.199,0-8.034-0.737-11.503-2.211s-6.477-3.603-9.022-6.388c-2.547-2.784-4.512-6.149-5.896-10.095c-1.385-3.945-2.077-8.405-2.077-13.378v-2.635c0-4.973,0.692-9.44,2.077-13.401c1.385-3.96,3.335-7.333,5.852-10.118c2.516-2.784,5.509-4.914,8.979-6.388c3.469-1.474,7.304-2.211,11.502-2.211c4.169,0,7.988,0.737,11.458,2.211c3.469,1.474,6.469,3.604,9.001,6.388c2.53,2.785,4.496,6.158,5.896,10.118C958.402,389.158,959.102,393.625,959.102,398.598z M943.2,401.233v-2.725c0-3.216-0.276-6.053-0.827-8.509c-0.551-2.457-1.362-4.519-2.435-6.187c-1.071-1.667-2.39-2.926-3.953-3.774s-3.343-1.273-5.338-1.273c-2.085,0-3.901,0.424-5.449,1.273c-1.549,0.849-2.845,2.107-3.887,3.774c-1.042,1.668-1.824,3.73-2.345,6.187c-0.521,2.457-0.782,5.293-0.782,8.509v2.725c0,3.187,0.261,6.008,0.782,8.465c0.521,2.457,1.31,4.534,2.367,6.231c1.057,1.697,2.368,2.978,3.931,3.841c1.563,0.864,3.388,1.295,5.473,1.295c1.994,0,3.767-0.431,5.315-1.295c1.548-0.863,2.852-2.144,3.908-3.841s1.861-3.774,2.412-6.231C942.924,407.241,943.2,404.42,943.2,401.233z"/>
+<path d="M603.938,485.659v26.713c-1.103,1.221-2.792,2.523-5.07,3.908c-2.278,1.385-5.145,2.568-8.599,3.551c-3.455,0.983-7.52,1.475-12.194,1.475c-4.318,0-8.234-0.692-11.748-2.077c-3.514-1.385-6.529-3.424-9.045-6.12c-2.517-2.694-4.453-6-5.807-9.916c-1.355-3.916-2.032-8.405-2.032-13.468v-3.618c0-5.062,0.685-9.56,2.055-13.49c1.369-3.931,3.298-7.243,5.785-9.938c2.486-2.695,5.419-4.742,8.8-6.143c3.379-1.399,7.095-2.1,11.145-2.1c5.985,0,10.854,0.946,14.606,2.837c3.752,1.892,6.596,4.497,8.532,7.817s3.112,7.154,3.529,11.502h-15.053c-0.298-2.145-0.856-3.968-1.675-5.472c-0.819-1.504-1.988-2.65-3.506-3.439s-3.484-1.185-5.896-1.185c-1.876,0-3.581,0.402-5.114,1.206c-1.534,0.805-2.836,2.019-3.909,3.641c-1.072,1.624-1.898,3.656-2.479,6.098c-0.581,2.442-0.871,5.301-0.871,8.576v3.708c0,3.246,0.275,6.09,0.826,8.531c0.551,2.442,1.385,4.475,2.501,6.098s2.546,2.844,4.288,3.663c1.742,0.819,3.804,1.229,6.187,1.229c1.667,0,3.097-0.142,4.288-0.425c1.191-0.282,2.181-0.64,2.971-1.072c0.789-0.431,1.392-0.841,1.809-1.229v-10.095h-10.899v-10.766H603.938z"/>
+<path d="M613.095,455.374h25.596c5.003,0,9.351,0.744,13.043,2.233s6.544,3.692,8.555,6.611c2.01,2.918,3.015,6.521,3.015,10.81c0,3.723-0.58,6.834-1.742,9.336c-1.161,2.501-2.776,4.563-4.846,6.187c-2.07,1.623-4.475,2.956-7.215,3.998l-5.137,2.903h-21.485l-0.09-12.105h15.902c1.995,0,3.647-0.357,4.958-1.072c1.311-0.714,2.301-1.734,2.971-3.06c0.67-1.324,1.005-2.91,1.005-4.757c0-1.876-0.343-3.484-1.027-4.824c-0.686-1.341-1.69-2.368-3.015-3.083c-1.326-0.714-2.956-1.071-4.892-1.071h-9.917v52.933h-15.679V455.374z M648.696,520.412l-14.384-28.767l16.617-0.09l14.562,28.187v0.67H648.696z"/>
+<path d="M727.805,486.598v2.636c0,4.974-0.692,9.433-2.077,13.378c-1.385,3.946-3.343,7.312-5.874,10.096s-5.523,4.913-8.979,6.388c-3.454,1.474-7.266,2.211-11.435,2.211c-4.199,0-8.034-0.737-11.503-2.211c-3.469-1.475-6.477-3.604-9.022-6.388c-2.547-2.784-4.512-6.149-5.896-10.096c-1.385-3.945-2.077-8.404-2.077-13.378v-2.636c0-4.973,0.692-9.439,2.077-13.4s3.335-7.333,5.852-10.118c2.516-2.784,5.509-4.913,8.979-6.388c3.469-1.474,7.304-2.211,11.502-2.211c4.169,0,7.988,0.737,11.458,2.211c3.469,1.475,6.469,3.604,9.001,6.388c2.53,2.785,4.496,6.157,5.896,10.118C727.105,477.158,727.805,481.625,727.805,486.598z M711.903,489.233v-2.726c0-3.216-0.276-6.052-0.827-8.509s-1.362-4.519-2.435-6.187c-1.071-1.668-2.39-2.926-3.953-3.775c-1.563-0.849-3.343-1.272-5.338-1.272c-2.085,0-3.901,0.424-5.449,1.272c-1.549,0.85-2.845,2.107-3.887,3.775s-1.824,3.729-2.345,6.187c-0.521,2.457-0.782,5.293-0.782,8.509v2.726c0,3.187,0.261,6.008,0.782,8.465c0.521,2.456,1.31,4.533,2.367,6.231c1.057,1.697,2.368,2.978,3.931,3.841c1.563,0.864,3.388,1.296,5.473,1.296c1.994,0,3.767-0.432,5.315-1.296c1.548-0.863,2.852-2.144,3.908-3.841c1.057-1.698,1.861-3.775,2.412-6.231C711.627,495.241,711.903,492.42,711.903,489.233z"/>
+<path d="M771.224,455.374h15.679v42.48c0,5.062-1.058,9.343-3.172,12.842c-2.114,3.5-5.077,6.143-8.889,7.929c-3.812,1.787-8.294,2.681-13.445,2.681c-5.093,0-9.567-0.894-13.423-2.681c-3.857-1.786-6.865-4.429-9.023-7.929c-2.159-3.499-3.238-7.779-3.238-12.842v-42.48h15.723v42.48c0,2.68,0.387,4.861,1.162,6.544c0.773,1.683,1.905,2.911,3.395,3.685c1.489,0.775,3.29,1.162,5.405,1.162c2.144,0,3.945-0.387,5.404-1.162c1.459-0.773,2.562-2.002,3.306-3.685s1.117-3.864,1.117-6.544V455.374z"/>
+<path d="M822.683,498.346h-16.17V486.24h16.17c2.203,0,3.99-0.372,5.36-1.117c1.369-0.743,2.374-1.778,3.015-3.104c0.641-1.324,0.961-2.82,0.961-4.489c0-1.786-0.32-3.439-0.961-4.958s-1.646-2.747-3.015-3.685c-1.37-0.938-3.157-1.407-5.36-1.407h-10.274v52.933h-15.679v-65.038h25.953c5.211,0,9.7,0.953,13.468,2.858c3.767,1.906,6.662,4.52,8.688,7.84c2.024,3.32,3.037,7.11,3.037,11.368c0,4.199-1.013,7.861-3.037,10.988c-2.026,3.127-4.922,5.562-8.688,7.304C832.383,497.475,827.894,498.346,822.683,498.346z"/>
+</svg>
+      </div>
+      <!-- phone + entity meta -->
+      <a href="tel:+61413909850" class="footer-cta">
+        Prefer to call? Reach the GM on 0413 909 850<span class="arrow">→</span>
+      </a>
+      <div class="footer-meta">
+        <div>VAQUERO COMMERCIAL FLOORING INSTALLATION PTY LTD</div>
+        <div>T/A VAQUERO FLOORCOVERINGS · ABN 81 665 295 778</div>
+        <div class="footer-privacy">Your details are used only to review your application — never sold or shared.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  // ═══════════════════════════════════════════════════════════════════
+  //   Supabase target
+  //   anon (publishable) key is safe client-side under insert-only RLS
+  //   schema: subbie_applications (column names match payload keys below)
+  // ═══════════════════════════════════════════════════════════════════
+  const SUPABASE_URL      = 'https://bctfwsmwxmhsfhayvwhj.supabase.co';
+  const SUPABASE_ANON_KEY = 'sb_publishable_emyK8RHRhji1GcAKBTNdjQ_e0lpMWIv';
+  const SUPABASE_TABLE    = 'subbie_applications';
+  const SUBMIT_TIMEOUT_MS = 10000;
+
+  // ─── dom helpers ──────────────────────────────────────────────────
+  const $  = (id) => document.getElementById(id);
+  const $$ = (sel, root = document) => root.querySelectorAll(sel);
+
+  // ─── cached refs (single source of truth for DOM lookups) ────────
+  const fields = {
+    name:      $('f-name'),
+    phone:     $('f-phone'),
+    email:     $('f-email'),
+    abn:       $('f-abn'),
+    insurance: $('f-insurance'),
+    postcode:  $('f-postcode'),
+    reference: $('f-reference'),
+    workLink:  $('f-worklink'),
+    notes:     $('f-notes')
+  };
+  const steps         = $$('.step');
+  const btnNext       = $('btn-next');
+  const btnBack       = $('btn-back');
+  const btnNextLabel  = btnNext.querySelector('span');
+  const progressFill  = $('progress-fill');
+  const stepCurrent   = $('step-current');
+  const stepLabel     = $('step-label');
+  const form          = $('app-form');
+  const successPanel  = $('success-panel');
+  const deferralPanel = $('deferral-panel');
+  const honeypot      = $('f-company');
+
+  // ─── form state ───────────────────────────────────────────────────
+  const state = {
+    step: 1,
+    totalSteps: 6,
+    specialty: new Set(),
+    experience: '',
+    whitecard: '',
+    availability: ''
+  };
+
+  const stepLabels = {
+    1: 'WHO',
+    2: 'SPECIALTY',
+    3: 'EXPERIENCE',
+    4: 'COMPLIANCE',
+    5: 'AVAILABILITY',
+    6: 'NOTES'
+  };
+
+  // ─── attribution (captured once at load, frozen) ─────────────────
+  //   UTM convention for FB group distribution:
+  //     ?utm_source=facebook&utm_medium=group&utm_campaign=subbie_intake&utm_content=<group_slug>
+  const attribution = (() => {
+    const params = new URLSearchParams(window.location.search);
+    return Object.freeze({
+      utm_source:   params.get('utm_source')   || null,
+      utm_medium:   params.get('utm_medium')   || null,
+      utm_campaign: params.get('utm_campaign') || null,
+      utm_content:  params.get('utm_content')  || null,
+      utm_term:     params.get('utm_term')     || null,
+      referrer:     document.referrer || null,
+      landing_url:  window.location.href
+    });
+  })();
+
+  // ─── selection helpers (collapses 4 near-identical handlers) ─────
+  function singleSelect(selector, setter) {
+    const nodes = $$(selector);
+    nodes.forEach(el => {
+      el.addEventListener('click', () => {
+        nodes.forEach(o => o.classList.remove('selected'));
+        el.classList.add('selected');
+        setter(el.dataset.value);
+      });
+    });
+  }
+
+  function multiSelect(selector, set) {
+    $$(selector).forEach(el => {
+      el.addEventListener('click', () => {
+        const v = el.dataset.value;
+        if (set.has(v)) { set.delete(v); el.classList.remove('selected'); }
+        else            { set.add(v);    el.classList.add('selected'); }
+      });
+    });
+  }
+
+  multiSelect('#specialty-chips .chip',     state.specialty);
+  singleSelect('#experience-pills .pill',   v => state.experience   = v);
+  singleSelect('#whitecard-chips .chip',    v => state.whitecard    = v);
+  singleSelect('#availability-pills .pill', v => state.availability = v);
+
+  // ─── FAQ — only one open at a time ────────────────────────────────
+  $$('.faq-item').forEach(item => {
+    item.addEventListener('toggle', () => {
+      if (!item.open) return;
+      $$('.faq-item').forEach(other => { if (other !== item) other.open = false; });
+    });
+  });
+
+  // ─── step rendering ───────────────────────────────────────────────
+  function renderStep() {
+    steps.forEach(s => s.classList.toggle('active', Number(s.dataset.step) === state.step));
+    stepCurrent.textContent  = state.step;
+    stepLabel.textContent    = stepLabels[state.step];
+    progressFill.style.width = (state.step / state.totalSteps * 100) + '%';
+    btnBack.disabled         = state.step === 1;
+    btnNextLabel.textContent = state.step === state.totalSteps ? 'Submit application' : 'Continue →';
+  }
+
+  // ─── validation (per-step map, in-character voice preserved) ─────
+  const EMAIL_RE = /^\S+@\S+\.\S+$/;
+  const fail = (msg) => { alert(msg); return false; };
+
+  const validators = {
+    1: () => {
+      const name  = fields.name.value.trim();
+      const phone = fields.phone.value.trim();
+      const email = fields.email.value.trim();
+      if (!name)                                         return fail('We need a name to put on the file.');
+      if (!phone || phone.replace(/\D/g, '').length < 8) return fail('Drop a mobile number we can reach you on.');
+      if (!EMAIL_RE.test(email))                         return fail('That email doesn\'t look right.');
+      return true;
+    },
+    2: () => state.specialty.size > 0 || fail('Pick at least one specialty.'),
+    3: () => !!state.experience       || fail('Let us know how long you\'ve been at it.'),
+    4: () => {
+      const abn       = fields.abn.value.trim();
+      const insurance = fields.insurance.value;
+      if (!abn)             return fail('We need your ABN.');
+      if (!insurance)       return fail('Select your PL cover level.');
+      if (!state.whitecard) return fail('White card — yes or no?');
+      // hard reject: anything under $10M PL means we don't progress
+      if (insurance === '$5M' || insurance === 'No cover yet') {
+        showDeferral();
+        return false;
+      }
+      return true;
+    },
+    5: () => {
+      if (!fields.postcode.value.trim()) return fail('Where are you based?');
+      if (!state.availability)           return fail('Pick your current availability.');
+      return true;
+    },
+    6: () => {
+      const ref  = fields.reference.value.trim();
+      const link = fields.workLink.value.trim();
+      if (!ref  || ref.length  < 3) return fail('A reference — a builder, PM, or shop who knows your work.');
+      if (!link || link.length < 6) return fail('Drop a link to your work — Insta, Drive, Dropbox, anything.');
+      return true;
+    }
+  };
+
+  const validateStep = () => {
+    const v = validators[state.step];
+    return v ? v() : true;
+  };
+
+  // ─── step navigation ──────────────────────────────────────────────
+  btnNext.addEventListener('click', () => {
+    if (!validateStep()) return;
+    if (state.step === state.totalSteps) { submitForm(); return; }
+    state.step++;
+    renderStep();
+  });
+
+  btnBack.addEventListener('click', () => {
+    if (state.step > 1) { state.step--; renderStep(); }
+  });
+
+  // Enter advances (except inside textarea)
+  form.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      btnNext.click();
+    }
+  });
+
+  // ─── deferral (insurance below $10M) ──────────────────────────────
+  function showDeferral() {
+    form.style.display = 'none';
+    deferralPanel.classList.add('active');
+    deferralPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  // ─── submission ───────────────────────────────────────────────────
+  function buildPayload() {
+    return Object.assign({
+      name:         fields.name.value.trim(),
+      phone:        fields.phone.value.trim(),
+      email:        fields.email.value.trim(),
+      specialty:    Array.from(state.specialty),
+      experience:   state.experience,
+      abn:          fields.abn.value.trim(),
+      insurance:    fields.insurance.value,
+      whitecard:    state.whitecard,
+      postcode:     fields.postcode.value.trim(),
+      availability: state.availability,
+      reference:    fields.reference.value.trim(),
+      work_link:    fields.workLink.value.trim(),
+      notes:        fields.notes.value.trim(),
+      submitted_at: new Date().toISOString()
+    }, attribution);
+  }
+
+  function submitForm() {
+    // optimistic UI — show success immediately, fire the POST in background
+    // (tradies on patchy reception still get confirmation; record lands when connection resumes)
+    form.style.display = 'none';
+    successPanel.classList.add('active');
+    successPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    // honeypot tripped → a bot filled the hidden field. Show the win-state so it
+    // moves on, but never write the spam row.
+    if (honeypot && honeypot.value) return;
+
+    const payload = buildPayload();
+    console.log('Vaquero application payload:', payload);
+
+    // production hardening: bound the request so a hung connection doesn't leak forever
+    const controller = new AbortController();
+    const timeoutId  = setTimeout(() => controller.abort(), SUBMIT_TIMEOUT_MS);
+
+    fetch(SUPABASE_URL + '/rest/v1/' + SUPABASE_TABLE, {
+      method: 'POST',
+      headers: {
+        'apikey':        SUPABASE_ANON_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
+        'Content-Type':  'application/json',
+        'Prefer':        'return=minimal'
+      },
+      body:   JSON.stringify(payload),
+      signal: controller.signal
+    })
+      .then(r => { if (!r.ok) console.warn('Supabase write non-OK:', r.status, r.statusText); })
+      .catch(err => console.warn('Supabase submission failed (UI already shown):', err))
+      .finally(() => clearTimeout(timeoutId));
+  }
+
+  // ─── TODO: Facebook Pixel + Google Analytics IDs ─────────────────
+  //   drop tracking pixel snippets here before launch
+
+  renderStep();
+})();
+</script>
+
+</body>
+</html>

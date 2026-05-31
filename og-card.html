@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter+Tight:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0a0908;
+    --ink: #f5f1ea;
+    --ink-2: #a8a39a;
+    --ink-3: #6b6760;
+    --amber: #e8a04b;
+    --amber-deep: #a86a1e;
+    --amber-glow: rgba(232, 160, 75, 0.20);
+    --line: rgba(245, 241, 234, 0.10);
+  }
+  html, body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter Tight', system-ui, sans-serif;
+    font-weight: 300;
+    position: relative;
+    padding: 80px 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  /* amber glow, top-right, echoing the hero */
+  body::before {
+    content: '';
+    position: absolute;
+    top: -260px;
+    right: -200px;
+    width: 760px;
+    height: 760px;
+    background: radial-gradient(circle, var(--amber-glow) 0%, transparent 62%);
+    pointer-events: none;
+  }
+  /* film grain, subtle */
+  body::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+  .top { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; }
+  .mark svg { height: 60px; width: auto; color: var(--ink); display: block; }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--amber);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7em;
+  }
+  .eyebrow .dot { width: 8px; height: 8px; background: var(--amber); display: inline-block; }
+
+  .mid { position: relative; z-index: 1; }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 300;
+    font-size: 82px;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    max-width: 18ch;
+  }
+  h1 em { font-style: italic; color: var(--amber); font-weight: 400; }
+  .sub {
+    margin-top: 30px;
+    font-size: 26px;
+    line-height: 1.4;
+    color: var(--ink-2);
+    max-width: 40ch;
+    font-weight: 300;
+  }
+
+  .bottom {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--line);
+    padding-top: 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .states { color: var(--ink); }
+  .states span { color: var(--amber); margin: 0 8px; }
+  .tag { color: var(--ink-3); }
+</style>
+</head>
+<body>
+  <div class="top">
+    <div class="mark" aria-label="Vaquero Group">
+      <svg viewBox="240 285 340 400" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+        <path d="M245.325,392.68c8.226,5.052,16.447,10.112,24.661,15.181c8.197,5.057,16.39,10.124,24.579,15.2c-0.11,24.21,0,48.43-0.04,72.65c21.69,13.48,43.92,26.11,65.28,40.12c-0.01-24.4,0.04-48.8-0.08-73.2c5.64,3.41,11.15,7.18,16.96,10.22c5.67-3.27,11.14-6.88,16.85-10.08c0.01,24.26,0.05,48.52,0.1,72.79c21.65-13.38,43.42-26.58,65.26-39.64c-0.11-24.28,0.18-48.55-0.12-72.82c8.185-4.984,16.401-10.024,24.646-15.12c8.256-5.102,16.448-10.203,24.577-15.301c0.102,21.737,0.153,43.477,0.153,65.221c0,21.749-0.051,43.496-0.153,65.24c-21.795,13.599-43.624,27.147-65.486,40.643c-21.921,13.532-43.874,27.012-65.858,40.438c-29.07-18.27-58.56-35.86-87.63-54.14c-14.62-8.9-29.14-17.95-43.7-26.94c0.048-21.749,0.071-43.495,0.071-65.24C245.396,436.16,245.372,414.42,245.325,392.68z"/>
+        <path d="M507.999,294.332v-0.113c-38.24-0.08-76.479,0.05-114.709-0.05c0.13,29.09-0.05,58.18,0.07,87.27c-5.52,3.7-11.31,6.97-17.15,10.14c-5.18-3.59-10.76-6.55-16.03-10.02c-0.35-29.1-0.19-58.22-0.34-87.31c-17.177-0.019-40.083-0.036-57.26-0.041c-17.175-0.005-40.08-0.003-57.255,0.006c0.015,12.446,0.023,24.89,0.023,37.332c0,12.452-0.008,24.907-0.023,37.364c7.965,4.935,15.936,9.862,23.915,14.78c35.68,21.993,71.477,43.799,107.39,65.42c35.387-23.5,72.575-46.592,111.627-69.014c6.593-3.785,13.172-7.513,19.738-11.185C507.996,344.051,507.998,319.192,507.999,294.332z"/>
+      </svg>
+    </div>
+    <div class="eyebrow"><span class="dot"></span>Subbie Network · AUS</div>
+  </div>
+
+  <div class="mid">
+    <h1>Premium floor jobs. <em>Long-term</em> partnership.</h1>
+    <div class="sub">A network of commercial floor layers across Australia. Premium rates, weekly invoicing, a steady book.</div>
+  </div>
+
+  <div class="bottom">
+    <div class="states">NSW<span>·</span>VIC<span>·</span>QLD<span>·</span>WA<span>·</span>SA<span>·</span>TAS</div>
+    <div class="tag">By Application</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+.DS_Store
+*.log
+
+# internal handoff notes — not for the public repo
+HANDOFF.md
