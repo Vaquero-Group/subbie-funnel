@@ -42,3 +42,19 @@ create policy "anon can insert applications"
 
 -- Review applications via the dashboard, a service-role query, or a downstream
 -- system holding the service-role key. No anon select/update/delete policies exist.
+
+-- ─────────────────────────────────────────────────────────────────────────
+--  Dashboard read access (see INTEGRATION.md). Two options:
+--
+--  (a) Service-role key, server-side — bypasses RLS, no policy needed.
+--      Simplest when the dashboard is a separate app. Default path.
+--
+--  (b) If the dashboard's operators authenticate against THIS project, give the
+--      authenticated role read access instead of using the service-role key.
+--      Uncomment to enable:
+--
+-- create policy "authenticated can read applications"
+--   on subbie_applications for select
+--   to authenticated
+--   using (true);
+-- ─────────────────────────────────────────────────────────────────────────

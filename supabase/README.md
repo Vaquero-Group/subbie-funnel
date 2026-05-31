@@ -8,6 +8,13 @@ is **insert-only** under RLS.
 - Table: `subbie_applications` (schema in [`schema.sql`](./schema.sql)) — **live and verified**
 - RLS: anon may `INSERT` only. No read/update/delete from the page.
 
+## Connecting the dashboard (The Rail / vaquero-crew)
+
+The intended home for applications is the ops dashboard. The full, ready-to-wire
+read connection — endpoint, auth, drop-in client, env vars, realtime — is in
+[`INTEGRATION.md`](./INTEGRATION.md). Wire it when you connect the dashboard;
+nothing there blocks the funnel collecting applications now.
+
 ## Viewing applications
 
 Dashboard → Table Editor → `subbie_applications`. Or, for a CSV pull with the
